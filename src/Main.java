@@ -1,17 +1,11 @@
 public class Main {
     public static void main(String[] args) {
-        String strNum = "123a";
+        String input = "1기0기0니0";
 
-        try {
-            int num = convertToInt(strNum);
+        String[] tokens = input.split("기");
 
-            System.out.println("변환 결과: " + num);
-        } catch (NumberFormatException e) {
-            System.out.println("숫자 형식 오류!");
+        for (String token : tokens) {
+            System.out.println(token);
         }
-    }
-
-    public static int convertToInt(String s) throws NumberFormatException {
-        return Integer.parseInt(s);
     }
 }
