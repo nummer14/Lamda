@@ -1,11 +1,19 @@
 public class Main {
     public static void main(String[] args) {
-        String input = "1기0기0니0";
+        String input = "100";
 
-        String[] tokens = input.split("기");
+        boolean result = validateTokenCount(input);
 
-        for (String token : tokens) {
-            System.out.println(token);
+        if (result) {
+            System.out.println("숫자 2개");
         }
+    }
+
+    public static boolean validateTokenCount(String tokens) throws NumberFormatException {
+        if (tokens.length() != 2) {
+            throw new NumberFormatException("숫자 2개가 아닙니다.");
+        }
+
+        return true;
     }
 }
