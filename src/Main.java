@@ -24,5 +24,9 @@ public class Main {
         for(Map.Entry<String, Integer> entry : fruitPrices.entrySet()) {
             System.out.println(entry.getKey() + entry.getValue());
         }
+
+        for(String key: fruitPrices.keySet()) {
+            System.out.println(key);
+        }
     }
 }
