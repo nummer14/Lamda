@@ -1,19 +1,18 @@
+import java.util.HashMap;
+import java.util.Map;
+
 public class Main {
     public static void main(String[] args) {
-        String input = "100";
+        Map<String, Integer> fruitPrices = new HashMap<>();
 
-        boolean result = validateTokenCount(input);
+        fruitPrices.put("사과", 17980);
+        fruitPrices.put("배", 10320);
+        fruitPrices.put("수박", 15920);
+        fruitPrices.put("멜론", 10630);
 
-        if (result) {
-            System.out.println("숫자 2개");
-        }
-    }
-
-    public static boolean validateTokenCount(String tokens) throws NumberFormatException {
-        if (tokens.length() != 2) {
-            throw new NumberFormatException("숫자 2개가 아닙니다.");
-        }
-
-        return true;
+        System.out.println(fruitPrices.containsKey("사과"));
+        System.out.println(fruitPrices.containsKey("포도"));
+        System.out.println(fruitPrices.containsValue(17980));
+        System.out.println(fruitPrices.containsValue(9999));
     }
 }
